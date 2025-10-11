@@ -17,9 +17,11 @@ app.use(cors());
 app.use('/api', mailtest);
 
 app.get('/', req, res){
-     return res.status(200).json('api runn successful.. for mail send');
-
-
+    try{
+        return res.status(200).json('api runn successful.. for mail send.');
+    }catch(error){
+        return res.status(500).json('internal server error...')
+    }
 }
 
 
