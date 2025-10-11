@@ -16,6 +16,12 @@ app.use(cors());
 
 app.use('/api', mailtest);
 
+app.get('/', req, res){
+     return res.status(200).json('api runn successful.. for mail send');
+
+
+}
+
 
 
 const port = process.env.PORT || 3000;
